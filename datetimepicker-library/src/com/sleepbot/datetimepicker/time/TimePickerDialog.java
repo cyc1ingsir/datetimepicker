@@ -18,7 +18,7 @@ package com.sleepbot.datetimepicker.time;
 import android.app.ActionBar.LayoutParams;
 import android.graphics.Rect;
 import android.os.Build;
-import android.support.v4.app.DialogFragment;
+import android.app.DialogFragment;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;

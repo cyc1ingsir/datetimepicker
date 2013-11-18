@@ -1,7 +1,7 @@
 package com.fourmob.datetimepicker.sample;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import android.app.Activity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.CheckBox;
@@ -12,7 +12,7 @@ import com.fourmob.datetimepicker.date.DatePickerDialog.OnDateSetListener;
 import com.sleepbot.datetimepicker.time.RadialPickerLayout;
 import com.sleepbot.datetimepicker.time.TimePickerDialog;
 
-public class MainActivity extends FragmentActivity implements OnDateSetListener, TimePickerDialog.OnTimeSetListener {
+public class MainActivity extends Activity implements OnDateSetListener, TimePickerDialog.OnTimeSetListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,14 +29,14 @@ public class MainActivity extends FragmentActivity implements OnDateSetListener,
             public void onClick(View v) {
                 datePickerDialog.setVibrate(isVibrate());
                 datePickerDialog.setYearRange(1985, 2028);
-                datePickerDialog.show(getSupportFragmentManager(), "datepicker");
+                datePickerDialog.show(getFragmentManager(), "datepicker");
             }
         });
 
         findViewById(R.id.timeButton).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                timePickerDialog.show(getSupportFragmentManager(), "time picker");
+                timePickerDialog.show(getFragmentManager(), "time picker");
             }
         });
     }

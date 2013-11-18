@@ -32,6 +32,15 @@ Including in your project
 
 Just add the library to your application as a library project.
 
+You might upload the library to your local maven repository with
+gradle uploadArchives
+within the datetimepicker-library folder.
+
+To include this into your project, just add the following to your gadle
+dependencies:
+compile "com.fourmob:datetimepicker-library:1.0.0-SNAPSHOT"
+
+
 Usage
 ---------
 

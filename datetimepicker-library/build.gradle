@@ -4,27 +4,39 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.5.6'
+        classpath 'com.android.tools.build:gradle:0.6.3'
     }
 }
 
 apply plugin: 'android-library'
+apply plugin: 'maven'
+
+group = 'com.fourmob'
+version = '1.0.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    mavenLocal()
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+          repository(url: "file://${System.env.HOME}/.m2/repository/")
+        }
+    }
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:18.0.0'
     compile 'com.nineoldandroids:library:2.4.0'
 }
 
 android {
-    compileSdkVersion 18
-    buildToolsVersion "18.1.1"
+    compileSdkVersion 19
+    buildToolsVersion "19.0.0"
     defaultConfig {
         minSdkVersion 7
-        targetSdkVersion 18
+        targetSdkVersion 19
     }
     sourceSets {
         main {
