@@ -39,6 +39,9 @@ local.properties
 # PDT-specific
 .buildpath
 
+# Gradle
+.gradle
+
 
 #################
 ## Visual Studio
